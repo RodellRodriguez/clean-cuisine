@@ -5,16 +5,16 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 
-@Entity
-class User {
+@Entity // this is a JPA annotation to make this object ready for storage in a JPA-based data store
+public class User {
     private @Id
-    @GeneratedValue Long id;
+    @GeneratedValue Long id;  // JPA annotations indicate that this is the primary key and is automatically populated by the JPA provider
     private String name;
     private String role;
 
-    User() {}
+    User() {}  // for JPA only, no use
 
-    User(String name, String role){
+    public User(String name, String role){  // A custom constructor is created when we need to create a new instance but do not yet have an id.
         this.name = name;
         this.role = role;
     }
