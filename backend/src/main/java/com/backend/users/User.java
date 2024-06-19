@@ -3,9 +3,11 @@ package com.backend.users;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 
 @Entity // this is a JPA annotation to make this object ready for storage in a JPA-based data store
+@Table(name = "users")  // Forcing table name to be plural to avoid postgres reserved keyword conflict
 public class User {
     private @Id
     @GeneratedValue Long id;  // JPA annotations indicate that this is the primary key and is automatically populated by the JPA provider
