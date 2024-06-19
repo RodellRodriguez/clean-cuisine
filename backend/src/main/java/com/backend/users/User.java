@@ -47,6 +47,6 @@ public class User {
 
     @Override
     public String toString() {
-      return "Employee{" + "id=" + this.id + ", name='" + this.name + '\'' + ", role='" + this.role + '\'' + '}';
+      return "User{" + "id=" + this.id + ", name='" + this.name + '\'' + ", role='" + this.role + '\'' + '}';
     }
 }
