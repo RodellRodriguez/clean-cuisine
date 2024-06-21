@@ -31,7 +31,7 @@ class UserController {
 
     @ResponseStatus(HttpStatus.CREATED) // 201
     @PostMapping
-    public User create(@RequestBody User user) {
+    public User create(@RequestBody User user) {  // This annotation deserializes the JSON into a User type
         // To-Do: Implement requestbody validation e.g. required fields
         return userService.save(user);
     }
