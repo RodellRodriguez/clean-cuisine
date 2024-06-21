@@ -23,6 +23,7 @@ class UserController {
     @Autowired
     private UserService userService;
 
+    // To-Do: Don't return a list of objects. Return an object for Api best practices.
     @GetMapping
     List<User> all() {
         return userService.findAll();
