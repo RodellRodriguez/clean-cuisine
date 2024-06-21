@@ -14,9 +14,15 @@ public class User {
     private String name;
     private String role;
 
+    public User(Long id, String name, String role) {
+      this.id = id;
+      this.name = name;
+      this.role = role;
+    }
+
     User() {}  // for JPA only, no use
 
-    public User(String name, String role){  // A custom constructor is created when we need to create a new instance but do not yet have an id.
+    public User(String name, String role) {  // A custom constructor is created when we need to create a new instance but do not yet have an id.
         this.name = name;
         this.role = role;
     }

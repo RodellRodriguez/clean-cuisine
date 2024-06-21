@@ -25,6 +25,13 @@ dependencies {
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
 
+// See https://docs.gradle.org/current/userguide/java_testing.html for docs on the configs below
 tasks.named('test') {
 	useJUnitPlatform()
+	failFast = true
+	testLogging.showStandardStreams = true  // Enables standard out and error printouts. See https://docs.gradle.org/current/dsl/org.gradle.api.tasks.testing.logging.TestLoggingContainer.html
+	
+	filter {
+		includeTestsMatching "com.backend.users.*"
+	}
 }
